@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.dark {
+    color: white;
+    background-color: hsl(207, 26%, 17%);
+}
+.dark .tile,
+.dark header {
+    background-color: hsl(209, 23%, 22%);
+}
+.dark button {
+    color: white;
+}
+button {
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+}
+body {
+    color: hsl(200, 15%, 8%);
+    transition: all 0.3s linear;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+}
+.container {
+    padding: 1rem;
+}
+h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+header {
+    background-color: white;
+}
+header button {
+    font-size: 1rem;
+}
+.col-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.col-group > input:first-of-type {
+    margin-right: 1rem;
+}
+.tile {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+}
+.tile > * {
+    padding: 1rem;
+}
+.name {
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+.tile img {
+    border-radius: 10px 10px 0 0;
+}
+.tile > dd:nth-of-type(1) {
+    order: -1;
+    padding: 0;
+}
+.data-list div {
+    margin: 1rem 0;
+}
+.data-list div > * {
+    display: inline-block;
+}
+.data-list dt {
+    font-weight: 600;
+}
+.attribution { text-align: center; padding: 1rem 0; }
+.attribution a { color: hsl(209, 23%, 22%); }
+.dark .attribution a {
+    color:hsl(0, 0%, 98%);
+}
+[aria-pressed] span.unselected {
+    display: none;
+}
+.multi-col-list {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+input, select {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%, 52%);
+    background-color: hsl(0, 0%, 98%);
+}
+.dark input {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+}
+.dark select {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+}
+main button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem 0.5rem 0;
+    border: 1px solid hsl(0, 0%, 52%);
+    cursor: pointer;
+}
+.data-list .stacked > dt {
+    display: block;
+}
+.meta-list:not(:last-of-type):after {
+    content: ", ";
+    margin-right: 5px;
+}
+@media only screen and (min-width: 1440px) {
+    input, select {
+        width: 25vw;
+    }
+    .desktop-col-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .desktop-col-group > * {
+        flex: 1;
+    }
+    .desktop-col-group img {
+        max-width: 40vw;
+    }
+    .desktop-col-group .data-list {
+        columns: 2;
+    }
+}
